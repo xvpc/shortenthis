@@ -1,0 +1,26 @@
+- Make UUID
+- Test using JSON
+- link DB with MiddleWare
+- Make Routing
+- Rate Limiting
+- Name, logo, domain, landing page
+- 404 page
+- Make API subdomain 
+- Secure API
+- Block All other Actios to the API
+- Add Rate Limiting
+
+------------------
+Links Schema
+{
+        "id": "6dfFCJC",
+        "originalLink": "http://xvpc.dev",
+	  "clicked": 1,	
+        "createdAt": "2015-04-25T13:25:30/245Z"
+}
+------------------
+~ http://localhost:3000/sdf25ld ~
+
+
+----------------------
+
