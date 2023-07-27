@@ -38,9 +38,17 @@ export default function Home({ DA_SECRET }) {
                 setError('')
                 try{
                     setPostLoading(true)
-                    const fetchUrl = process.env.NEXT_PUBLIC_API_URL + `/add?link=${value}` + `&secrets=${DA_SECRET}`
+                    const fetchUrl = process.env.NEXT_PUBLIC_API_URL + '/add'
 
-                    const req = await axios.get(fetchUrl)
+                    const req = await axios.get(fetchUrl, {
+                        params: {
+                            link: value
+                        },
+                        headers: {
+                            authorization: DA_SECRET
+                        }
+                    })
+                    
                     setPostData(req.data)
                     // QRCode
                     QRCode.toDataURL(url + req.data.id, {

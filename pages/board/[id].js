@@ -21,10 +21,17 @@ export default function LinkBoard() {
 
             
             if(id){
-                const url = process.env.NEXT_PUBLIC_API_URL + `/get?id=${id}` + `&secrets=${process.env.NEXT_PUBLIC_API_SECRET}`
+                const url = process.env.NEXT_PUBLIC_API_URL + '/get'
 
                 try{
-                    const req = await axios.get(url)
+                    const req = await axios.get(url, {
+                        params: {
+                            id: id
+                        }, 
+                        headers: {
+                            authorization: process.env.NEXT_PUBLIC_API_SECRET
+                        }
+                    })
 
                     // console.log('req from useEffect =>', req?.data)
                     if(req?.data){
