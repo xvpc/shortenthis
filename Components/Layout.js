@@ -42,6 +42,10 @@ export default function Layout({ children, noCards }) {
         <>
             <Head>
                     <title>ShortenThis</title>
+                    <script async 
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2145985963089716"
+                    crossorigin="anonymous">
+                    </script>
                 {!noCards &&
                 <>
                     <meta name="title" content='ShortenThis' />
